@@ -11,7 +11,6 @@ const start = async () => {
     server.on("close", async () => {
       try {
         await closeDb();
-        console.log("Disconnected from MongoDB server");
       } catch (error) {
         console.log("Error while closing the MongoDB connection: ", error);
       }
